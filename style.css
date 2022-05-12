@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  width: 100%;
+  height: 5rem;
+  background-color: #128596;
+}
+
+.wrap-header {
+  max-width: 1900px;
+  margin: 0 auto;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fig-logo {
+  width: 150px;
+  height: 80px;
+  text-align: center;
+}
+
+.fig-logo img {
+  width: 80px;
+}
+
+.fig-btn {
+  display: none;
+}
+
+.navigation {
+  padding: 1.2rem;
+  display: flex;
+  align-items: center;
+  width: 600px;
+  height: 100%;
+}
+
+.navigation ul {
+  list-style: none;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navigation ul li a {
+  text-decoration: none;
+  color: #e2eff4;
+  font-size: 1.2rem;
+}
+
+input {
+  background-image: url("Imagens/lupa.png");
+  background-repeat: no-repeat;
+  background-position: 7% center;
+  background-size: 10%;
+  padding: 0.5rem;
+  border-radius: 100px;
+  border: 2px solid black;
+}
+
+@media (max-width: 630px) {
+  .navigation {
+    display: none;
+  }
+
+  .fig-btn {
+    display: flex;
+  }
+
+  .container {
+    justify-content: space-around;
+  }
+
+  .fig-logo {
+    position: relative;
+    right: 10%;
+  }
+
+  .fig-btn img {
+    width: 40px;
+  }
+}
