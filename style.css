@@ -2,6 +2,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Comfortaa", cursive;
+}
+@import url("https://fonts.googleapis.com/css2?family=Anek+Odia:wght@100&family=Beau+Rivage&family=Bebas+Neue&family=Comfortaa:wght@600&family=Festive&family=Grape+Nuts&family=Montserrat:wght@400;900&family=Ms+Madi&family=Nunito&family=Nunito+Sans&family=Open+Sans:wght@400;500;600&family=Oswald:wght@200;700&family=Poppins:wght@300;500&family=Quintessential&family=Roboto+Condensed:wght@400;700&family=RocknRoll+One&family=Smooch+Sans:wght@200&family=Spectral:wght@700&family=Updock&family=Vollkorn:wght@500&family=Water+Brush&display=swap");
+
+body {
+  background-color: #e2eff4;
 }
 
 header {
@@ -10,7 +16,7 @@ header {
   background-color: #128596;
 }
 
-.wrap-header {
+.wrap {
   max-width: 1900px;
   margin: 0 auto;
 }
@@ -67,6 +73,91 @@ input {
   border: 2px solid black;
 }
 
+.background {
+  background-color: #ffe5ac;
+  width: 100%;
+}
+
+.contain {
+  width: 100%;
+  position: relative;
+}
+
+.box-img {
+  text-align: center;
+}
+
+.box-img img {
+  width: 560px;
+  height: 560px;
+  object-fit: cover;
+}
+
+.box-information {
+  width: 50%;
+  top: 4rem;
+  left: 2rem;
+  position: absolute;
+}
+
+.box-information h1 {
+  color: #128596;
+  font-size: 5rem;
+}
+
+.box-information ul {
+  width: 60%;
+  list-style: none;
+}
+
+.box-information ul li {
+  margin-top: 0.3rem;
+  width: 100%;
+  padding: 0.5rem;
+  list-style: none;
+  cursor: pointer;
+  color: #d56e0e;
+  font-size: 1.2rem;
+}
+
+.box-information ul li:hover {
+  background-color: #febd81;
+  color: #db7948;
+}
+
+.box-history {
+  background-color: #e2eff4;
+  width: 100%;
+  padding: 3rem;
+  text-align: center;
+}
+
+.box-history h2 {
+  font-size: 2.5rem;
+  color: #128596;
+}
+
+.line {
+  opacity: 0.3;
+  background-color: #698996;
+  width: 320px;
+  height: 3px;
+  margin: 0 auto;
+}
+
+/* Aqui começa o @media */
+@media (max-width: 1190px) {
+  .box-information {
+    top: 3rem;
+  }
+}
+
+@media (max-width: 940px) {
+  .box-information {
+    width: 90%;
+  }
+}
+
 @media (max-width: 630px) {
   .navigation {
     display: none;
@@ -87,5 +178,37 @@ input {
 
   .fig-btn img {
     width: 40px;
+  }
+
+  .box-information {
+    text-align: center;
+    left: 0rem;
+    width: 100%;
+  }
+
+  .box-information ul {
+    text-align: start;
+    position: absolute;
+    top: 6rem;
+    right: 0px;
+    width: 50%;
+  }
+
+  .box-information ul li {
+    font-size: 1.5rem;
+  }
+
+  .box-information h1 {
+    font-size: 3rem;
+  }
+
+  .box-img {
+    text-align: center;
+  }
+
+  .box-img img {
+    position: relative;
+    width: 100%;
+    left: -15rem;
   }
 }
