@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Comfortaa", cursive;
+  /* Scroll suave */
+  scroll-behavior: smooth;
+  /* Scroll suave */
 }
 @import url("https://fonts.googleapis.com/css2?family=Anek+Odia:wght@100&family=Beau+Rivage&family=Bebas+Neue&family=Comfortaa:wght@600&family=Festive&family=Grape+Nuts&family=Montserrat:wght@400;900&family=Ms+Madi&family=Nunito&family=Nunito+Sans&family=Open+Sans:wght@400;500;600&family=Oswald:wght@200;700&family=Poppins:wght@300;500&family=Quintessential&family=Roboto+Condensed:wght@400;700&family=RocknRoll+One&family=Smooch+Sans:wght@200&family=Spectral:wght@700&family=Updock&family=Vollkorn:wght@500&family=Water+Brush&display=swap");
 
@@ -11,6 +14,9 @@ body {
 }
 
 header {
+  position: fixed;
+  top: 0px;
+  z-index: 9999999;
   width: 100%;
   height: 5rem;
   background-color: #128596;
@@ -76,6 +82,7 @@ input {
 .background {
   background-color: #ffe5ac;
   width: 100%;
+  padding-top: 100px;
 }
 
 .contain {
@@ -145,6 +152,128 @@ input {
   margin: 0 auto;
 }
 
+.person {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.group-friends {
+  margin: 0 auto;
+  max-width: 80rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.box-lula,
+.box-patrick,
+.box-sirigueijo,
+.box-plankton {
+  position: relative;
+  width: 28rem;
+  height: 32rem;
+  background-color: #128596;
+  overflow: hidden;
+}
+
+.text-friends {
+  padding: 2rem;
+  position: absolute;
+  top: -230px;
+  width: 100%;
+  height: 14rem;
+  background-color: #bf7a59;
+  opacity: 0.9;
+  border-radius: 0px 0px 50px 50px;
+  transition: 1s all;
+}
+
+.box-lula:hover .text-friends {
+  top: 0px;
+}
+
+.box-patrick:hover .text-friends {
+  top: 0px;
+}
+
+.box-sirigueijo:hover .text-friends {
+  top: 0px;
+}
+
+.box-plankton:hover .text-friends {
+  top: 0px;
+}
+
+.text-friends h3 {
+  color: white;
+  font-size: 2.5rem;
+}
+
+.text-friends p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.2rem;
+}
+
+.box-lula figure,
+.box-patrick figure,
+.box-sirigueijo figure,
+.box-plankton figure {
+  width: 100%;
+  text-align: center;
+}
+
+.box-lula img {
+  width: 400px;
+}
+
+.box-patrick img {
+  width: 360px;
+}
+
+.box-sirigueijo img {
+  width: 420px;
+  object-fit: cover;
+}
+
+.box-plankton img {
+  width: 460px;
+}
+
+.btn-friends {
+  position: relative;
+  bottom: 28px;
+  background-color: #bf7a59;
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  width: 10rem;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+footer {
+  padding: 2rem;
+  width: 100%;
+  background-color: #128596;
+}
+
+.box-footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.box-footer p {
+  color: white;
+  font-weight: 200;
+  font-size: 0.8rem;
+  width: 400px;
+}
+
 /* Aqui começa o @media */
 @media (max-width: 1190px) {
   .box-information {
@@ -210,5 +339,51 @@ input {
     position: relative;
     width: 100%;
     left: -15rem;
+  }
+
+  .box-footer {
+    flex-direction: row-reverse;
+  }
+
+  .box-footer p {
+    font-size: 0.7rem;
+    width: 200px;
+  }
+}
+
+@media (max-width: 475px) {
+  .box-lula,
+  .box-patrick,
+  .box-sirigueijo,
+  .box-plankton {
+    width: 100%;
+    height: 32rem;
+  }
+
+  .box-lula img {
+    width: 100%;
+  }
+
+  .box-patrick img {
+    width: 100%;
+  }
+
+  .box-sirigueijo img {
+    width: 100%;
+  }
+
+  .box-plankton img {
+    width: 100%;
+  }
+
+  .line {
+    display: none;
+  }
+}
+
+@media (max-width: 360px) {
+  .box-footer p {
+    font-size: 0.5rem;
+    width: 100px;
   }
 }
